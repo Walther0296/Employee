@@ -37,14 +37,14 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.salary = 1000;
+        this.salary = 1000.0;
     }
 
     public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = 25;
-        this.salary = 1000;
+        this.salary = 1000.0;
     }
 
     public String getFirstName() {
