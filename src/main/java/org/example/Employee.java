@@ -29,6 +29,8 @@ public class Employee {
         this.salary = salary;
     }
 
+
+
     public Employee(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -84,6 +86,18 @@ public class Employee {
     public String getFullName() {
         System.out.println(String.format(firstName + " " + lastName));
         return null;
+    }
+
+    @Override
+    public boolean equals (Object anotherObject) {
+        if (anotherObject == null) {
+            return false;
+        }
+        if (!(anotherObject instanceof Employee)) {
+            return false;
+        }
+        Employee anotherEmployee = (Employee) anotherObject;
+        return firstName.equals(anotherEmployee.getFirstName()) && lastName.equals(anotherEmployee.getLastName());
     }
 
 
