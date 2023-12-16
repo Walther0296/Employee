@@ -18,6 +18,11 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Employee employee = new Employee("Сергей", "Зверев", 25, 40000);
+        Employee employee1 = new Employee("Сергей", "Кинчев", 25);
+        Employee employee2 = new Employee("Сергей", "Кинчев");
+
+        employee.getFullName();
+        employee2.toString();
     }
 }
