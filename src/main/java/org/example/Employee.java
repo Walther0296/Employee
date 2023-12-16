@@ -15,6 +15,8 @@ package org.example;
 //4. Реализовать метод toString, который выводит информацию о сотруднике в строковом представлении (формат придумать самостоятельно). ++++
 //5. Реализовать методы equals и hashCode, которые учитывают только firstName и lastName.
 
+import java.util.Objects;
+
 public class Employee {
 
     private String firstName;
@@ -98,6 +100,11 @@ public class Employee {
         }
         Employee anotherEmployee = (Employee) anotherObject;
         return firstName.equals(anotherEmployee.getFirstName()) && lastName.equals(anotherEmployee.getLastName());
+    }
+
+    @Override
+    public int hashCode (){
+        return Objects.hash(firstName, lastName);
     }
 
 
